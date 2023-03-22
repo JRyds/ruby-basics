@@ -41,31 +41,31 @@ end
 
 # MAIN PROGRAM
 loop do
-   puts 'Select [D]ecode, [E]ncode or e[X]it:'
-   choice = gets.chomp.downcase
+  puts 'Select [D]ecode, [E]ncode or e[X]it:'
+  choice = gets.chomp.downcase
 
-   case choice
-   when 'd'
-     p 'Enter Text To Decode: '
-     text = gets.chomp
-     text_array = text.chars
+  case choice
+  when 'd'
+    p 'Enter Text To Decode: '
+    text = gets.chomp
+    text_array = text.chars
 
-     p 'Enter Decode Shift Amount, (0 - 25): '
-     shift_amount = gets.chomp.to_i
-     neg_shift_amount = -shift_amount
-     puts encode(lower_alph, upper_alph, text_array, neg_shift_amount)
-   when 'e'
-     p 'Enter Text To Encode: '
-     text = gets.chomp
-     text_array = text.chars
+    p 'Enter Decode Shift Amount, (0 - 25): '
+    shift_amount = gets.chomp.to_i
+    neg_shift_amount = -shift_amount
+    puts encode(lower_alph, upper_alph, text_array, neg_shift_amount)
+  when 'e'
+    p 'Enter Text To Encode: '
+    text = gets.chomp
+    text_array = text.chars
 
-     p 'Enter Encrypt Shift Amount, (0 - 25): '
-     shift_amount = gets.chomp.to_i
-     puts encode(lower_alph, upper_alph, text_array, shift_amount)
-   when 'x'
-     puts 'Goodbye'
-     break
-   end
+    p 'Enter Encrypt Shift Amount, (0 - 25): '
+    shift_amount = gets.chomp.to_i
+    puts encode(lower_alph, upper_alph, text_array, shift_amount)
+  when 'x'
+    puts 'Goodbye'
+    break
+  end
 end
 
 
